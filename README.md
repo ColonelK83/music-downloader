@@ -2,6 +2,14 @@
 
 A modern web application that allows users to search for songs on Spotify and automatically download them from YouTube, then seamlessly add them to your Navidrome music server. Perfect for building your personal music library with proper metadata, album art, and organized file structure.
 
+## Screenshots
+
+### Main Interface
+![Main Interface](images/main-interface.png)
+
+### Download Queue with Progress Bars
+![Download Queue](images/download-queue.png)
+
 ## Features
 
 - 🎵 Search for songs using Spotify's rich database
@@ -212,6 +220,7 @@ music-downloader/
 │   ├── index.html             # Main HTML page
 │   ├── styles.css             # Styling
 │   └── app.js                 # Frontend JavaScript
+├── images/                    # Screenshots and images for README
 ├── Dockerfile                 # Docker image definition
 ├── docker-compose.yml         # Docker Compose configuration
 ├── DOCKER.md                  # Docker deployment guide
