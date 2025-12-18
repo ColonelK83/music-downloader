@@ -8,18 +8,18 @@ services:
     container_name: music-downloader
     restart: unless-stopped
     ports:
-      - "8000:8000"
+      - "8321:8321"
     env_file:
-      - backend/.env
+      - stack.env
     volumes:
       # Mount Navidrome music directory (REQUIRED: Change to your actual Navidrome music path)
       # Example: - /path/to/navidrome/music:/music:rw
-      - ./navidrome-music:/music:rw
+      - /media/wd_elements_1tb/music:/music:rw
       # Mount downloads directory for temp files (optional, for persistence)
       - ./downloads:/app/downloads:rw
     environment:
       - API_HOST=0.0.0.0
-      - API_PORT=8000
+      - API_PORT=8322
       - NAVIDROME_MUSIC_PATH=/music
       # If Navidrome is running in another container, use service name
       # If running on host, use host.docker.internal (or 172.17.0.1 on Linux)
@@ -33,4 +33,3 @@ services:
 networks:
   music-network:
     driver: bridge
-
